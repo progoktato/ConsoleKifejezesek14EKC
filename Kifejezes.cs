@@ -11,7 +11,22 @@ namespace ConsoleMuveletek
         int operandusBal;
         string muvelet;
         int operandusJobb;
+        private string sor;
 
+        /*
+        public Kifejezes(string scvSor) 
+            : this(int.Parse(scvSor.Split()[0]), scvSor.Split()[1], int.Parse(scvSor.Split()[2]))
+        {
+        }*/
+        
+        public Kifejezes(string scvSor)
+        {
+            var mezok = scvSor.Split();
+            this.operandusBal = int.Parse(mezok[0]);
+            this.muvelet = mezok[1];
+            this.operandusJobb = int.Parse(mezok[2]);
+        }
+        
         public Kifejezes(int operandusBal, string muvelet, int operandusJobb)
         {
             this.operandusBal = operandusBal;
